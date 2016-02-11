@@ -1,0 +1,38 @@
+﻿Build started 10/30/2015 3:44:30 PM.
+Project "C:\Users\storksons\Dropbox\UW Platteville\Classes\Fall 2015\OOPS2\Programs\Prog2\Project2\Project2\Project2.vcxproj" on node 2 (Rebuild target(s)).
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib HappyBot.cpp MyForm.cpp VBot.cpp WeirdBot.cpp
+  HappyBot.cpp
+c:\users\storksons\dropbox\uw platteville\classes\fall 2015\oops2\programs\prog2\project2\project2\VBot.h(18): error C3624: 'System::ComponentModel::Component': use of this type requires a reference to assembly 'System'
+          This diagnostic occurred while importing type 'System::Windows::Forms::Control ' from assembly 'System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+          This diagnostic occurred while importing type 'System::Windows::Forms::ScrollableControl ' from assembly 'System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+          This diagnostic occurred while importing type 'System::Windows::Forms::Panel ' from assembly 'System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+  MyForm.cpp
+c:\users\storksons\dropbox\uw platteville\classes\fall 2015\oops2\programs\prog2\project2\project2\MyForm.h(6): error C2039: 'ComponentModel' : is not a member of 'System'
+c:\users\storksons\dropbox\uw platteville\classes\fall 2015\oops2\programs\prog2\project2\project2\MyForm.h(6): error C2871: 'ComponentModel' : a namespace with this name does not exist
+c:\users\storksons\dropbox\uw platteville\classes\fall 2015\oops2\programs\prog2\project2\project2\MyForm.h(16): error C3624: 'System::ComponentModel::Component': use of this type requires a reference to assembly 'System'
+          This diagnostic occurred while importing type 'System::Windows::Forms::Control ' from assembly 'System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+          This diagnostic occurred while importing type 'System::Windows::Forms::ScrollableControl ' from assembly 'System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+          This diagnostic occurred while importing type 'System::Windows::Forms::ContainerControl ' from assembly 'System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+          This diagnostic occurred while importing type 'System::Windows::Forms::Form ' from assembly 'System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+c:\users\storksons\dropbox\uw platteville\classes\fall 2015\oops2\programs\prog2\project2\project2\MyForm.h(55): error C3083: 'ComponentModel': the symbol to the left of a '::' must be a type
+c:\users\storksons\dropbox\uw platteville\classes\fall 2015\oops2\programs\prog2\project2\project2\MyForm.h(55): error C2039: 'Container' : is not a member of 'System'
+c:\users\storksons\dropbox\uw platteville\classes\fall 2015\oops2\programs\prog2\project2\project2\MyForm.h(55): error C2143: syntax error : missing ';' before '^'
+c:\users\storksons\dropbox\uw platteville\classes\fall 2015\oops2\programs\prog2\project2\project2\MyForm.h(55): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\storksons\dropbox\uw platteville\classes\fall 2015\oops2\programs\prog2\project2\project2\MyForm.h(188): fatal error C1903: unable to recover from previous error(s); stopping compilation
+  VBot.cpp
+c:\users\storksons\dropbox\uw platteville\classes\fall 2015\oops2\programs\prog2\project2\project2\Vbot.h(18): error C3624: 'System::ComponentModel::Component': use of this type requires a reference to assembly 'System'
+          This diagnostic occurred while importing type 'System::Windows::Forms::Control ' from assembly 'System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+          This diagnostic occurred while importing type 'System::Windows::Forms::ScrollableControl ' from assembly 'System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+          This diagnostic occurred while importing type 'System::Windows::Forms::Panel ' from assembly 'System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+  WeirdBot.cpp
+c:\users\storksons\dropbox\uw platteville\classes\fall 2015\oops2\programs\prog2\project2\project2\VBot.h(18): error C3624: 'System::ComponentModel::Component': use of this type requires a reference to assembly 'System'
+          This diagnostic occurred while importing type 'System::Windows::Forms::Control ' from assembly 'System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+          This diagnostic occurred while importing type 'System::Windows::Forms::ScrollableControl ' from assembly 'System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+          This diagnostic occurred while importing type 'System::Windows::Forms::Panel ' from assembly 'System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+  Generating Code...
+Done Building Project "C:\Users\storksons\Dropbox\UW Platteville\Classes\Fall 2015\OOPS2\Programs\Prog2\Project2\Project2\Project2.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.65

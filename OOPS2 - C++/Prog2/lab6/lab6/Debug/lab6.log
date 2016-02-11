@@ -1,0 +1,13 @@
+﻿Build started 10/20/2015 7:50:27 PM.
+Project "C:\Users\storksons\Dropbox\UW Platteville\Classes\Fall 2015\OOPS2\Programs\Prog2\lab6\lab6\lab6.vcxproj" on node 2 (Build target(s)).
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm.cpp
+  MyForm.cpp
+c:\users\storksons\dropbox\uw platteville\classes\fall 2015\oops2\programs\prog2\lab6\lab6\MyForm.h(114): error C2228: left of '.value' must have class/struct/union
+          type is 'System::Windows::Forms::TextBox ^'
+          did you intend to use '->' instead?
+Done Building Project "C:\Users\storksons\Dropbox\UW Platteville\Classes\Fall 2015\OOPS2\Programs\Prog2\lab6\lab6\lab6.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.87

@@ -1,0 +1,99 @@
+//---------------------------------------------------------------------
+// Name:    Steven Storkson
+// Project: Progam 4
+//
+// Purpose: Prog4 - Maze Class header file
+//
+//---------------------------------------------------------------------
+#pragma once 
+
+// Needed for gcroot declaration:  allow use of GC class in non-GC class
+#include <vcclr.h>   
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+using namespace System;
+using namespace System::ComponentModel;
+using namespace System::Collections;
+using namespace System::Windows::Forms;
+using namespace System::Data;
+using namespace System::Drawing;
+
+class Maze
+{
+public:
+
+   // Read in the map.
+   // Set valid accordingly, depending on if the map could be read in okay.
+
+   //---------------------------------------------------------------------
+   // 
+   //---------------------------------------------------------------------
+	Maze( Panel ^drawingPanel, System::IO::FileStream:: &ifs );
+	//Maze( ifstream &ifs );
+
+   //---------------------------------------------------------------------
+   // 
+   //---------------------------------------------------------------------
+   bool IsValid() const { return valid; }
+
+   //---------------------------------------------------------------------
+   // 
+   //---------------------------------------------------------------------
+   bool IsFree() const { return free; }
+
+
+   // Set things up and call RecSolve.
+   // This "solves" the maze.
+   // You will need to convert pixel location to 
+   // row and col ( x converts col, y to row ).
+   //---------------------------------------------------------------------
+   // 
+   //---------------------------------------------------------------------
+   void Solve ( int xPixel, int yPixel );
+
+   //---------------------------------------------------------------------
+   // 
+   //---------------------------------------------------------------------
+   void ShowOriginal() { Show(orig); }
+
+   //---------------------------------------------------------------------
+   // 
+   //---------------------------------------------------------------------
+   void ShowSolved() { Show(solved); }
+
+  
+private:
+
+      static const int CELLSIZE = 16;
+      static const int MAXSIZE = 30;
+
+      static const char OPEN = 'O' ;
+      static const char DEADEND = '+' ;
+      static const char EXIT = 'E' ;
+      static const char START = 'S' ;
+      static const char VISITED = 'X';
+
+      int width, height;
+      bool free;
+      bool valid;
+
+      gcroot<System::Windows::Forms::Panel^> mazePanel;
+
+      char orig[MAXSIZE][MAXSIZE];
+      char solved[MAXSIZE][MAXSIZE];
+
+      // This MUST be recursive
+	  //---------------------------------------------------------------------
+      // 
+      //---------------------------------------------------------------------
+      void RecSolve ( int row, int col );
+
+	  //---------------------------------------------------------------------
+      // 
+      //---------------------------------------------------------------------
+      void Show ( char cells[][MAXSIZE] );
+};
+

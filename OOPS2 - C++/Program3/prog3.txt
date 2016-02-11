@@ -1,0 +1,173 @@
+CS 2630 - Object-Oriented Programming & Data Structures II  F15  
+
+Program:                   3 - BOT wars Visual C++ Windows Program
+Points:                    30
+Due Date for Plans:        October 13, 10:00 p.m.. 
+Grace Date for Plans:      October 15, 10:00 p.m..
+Due Date for rest:         October 27, 10:00 p.m..
+Grace Date for rest:       October 30, Demo no later than October 27, 3:00 p.m.
+
+---------------------------------------------------------------------------
+
+Besides the program, the other requirements are:
+
+  1. Test Plan:  You are required to do a Test Plan for this program.
+     You must use the format discussed in class.
+     You must have a minimum of 3 system aspects and at least 10 Test Sets, 
+     testing the MOST IMPORTANT aspects of this program.
+     You must name it as TP_<user_name>.doc or TP_<user_name>.docx
+     Failure to do so will result in up to a 5 point deduction.
+
+     It must be put in the S:\Courses\CSSE\shiy\2630\1DropBox\Prog3_TP
+     folder no later than "Grace Date for Plans" 
+     specified above.  Failure to do so will result in up to a 5 point deduction.
+
+  2. Work Plan: It must show dates/times you will work on this program, 
+     together with what you plan to work on at that time, and how you
+     plan to finish by the due date or before.  You must come up with
+     a work plan by "Grace Date for plans" specified above. 
+     Failure to do so will result in up to a 5 point deduction.
+     You must use the CSSE Hub Tool demonstrated in lab and lecture to 
+     develop your plan.  
+	 
+     You will need your Edirectory username and password to use this
+     tool. The plan is under the project name, Prog3.
+
+  3. Version Control:  Starting on October 15, you must periodically 
+     (every 3 days) check your program into subversion.  Note that I will 
+     use what is in there during you demonstration, so your grade 
+     depends on it! You MUST put good comments on each check-in.
+     If you completely finish early, you should mark that you are finished 
+     in the tool, and obviously won't continue to check in.
+
+     When asking for help, whether via email or coming to my office, 
+     you MUST have your latest version checked into subversion or S: drive.
+
+  4. Time Logs: 
+     You must use the CSSE Hub Tool demonstrated in lab and lecture to 
+     enter your time that you have worked on this program.  
+     This portion of the tool will allow you to record you start 
+     and stop times that you work on your program 1, including work 
+     on design, implementation (coding), testing, or meeting with 
+     your instructor. Make sure to add comments to your entries.
+     I will deduct points if you don't add comments.
+     Starting on October 15, you must periodically 
+     put your time entries in Prog3 project via this tool. 
+	 Correct, accurate and sufficient entries are worth up to 5 points.
+
+  5. Test bed mains:  None required for this program.
+
+You will NOT be submitting this program to the Grader.
+You will be demonstrating this program in my office.
+I will be checking out what is in version control when you come up 
+to demonstrate.  Therefore, you must make sure that what is in there
+will allow me to build and run.
+
+Also, note that I will be asking questions when you come to demonstrate.
+It is assumed you will understand what you have done.  Expect to lose
+points if this is not true.
+
+---------------------------------------------------------------------------
+
+A VBot (Virtual Bot) is a little creature that moves around on the screen.
+When VBots meet, they do battle.  Each VBot puts a given amount of energy
+into the battle.  Winners are rewarded and losers are penalized.
+
+I will provide an abstract base class, called VBot.
+You will be making at least three descendant classes.
+Furthermore, you need to make a VBot List class to handle them.
+
+A timer is used to move the bots.
+
+I have put the VBot.h and VBot.cpp files on CS 263 web page.  Furthermore, 
+I put in an executable of program 3. Note for the executable to run, you
+will need all 4 bit map (.bmp) files in the same folder as your executable.
+
+You must have the minimum functionality that mine has, 
+although you can achieve it with different controls than I used.
+
+-------------------------------------------------------------------------
+
+Some requirements and hints
+
+ 1. The main form .H file must make polymorphic use of VBots and
+    must use the VBot list.  Obviously you must "new" the different bots,
+    but other than that, you can only use the methods in the VBot and
+    the VBot List.  You will need to declare a Bot List pointer in the
+    main form class.
+
+ 2. The main form can't be any bigger than 1024 x 768.
+    It must run on my machine without changing the graphics setup.
+
+ 3. You must have the minimum functionality that mine has, 
+    although you can achieve it with different controls than I used.
+
+ 4. You must have significantly (algorithmically) different movement 
+    and fighting methods for the different VBots.  Your VBots must
+    look significantly different than mine. 
+
+ 5. You must make separate CPP and H files for the list and bots.
+    If you want, you can put all the descendant bots in one set of 
+    CPP, H files.  You can only have one or two line inline bodies in the 
+    H files you create.  The bodies can be longer in the form's H file.
+
+ 6. When the timer goes off, you need to move all the VBots in the list and
+    check for battles, doing those that occur.  You can get a Panel to 
+    repaint itself by calling Panel's Invalidate method.
+    The Panel's paint event method only needs to show all VBots.
+
+ 7. To make the bitmap files for the VBots, use "Project/Add Resource"
+    and select Bitmap.  You can change the size via the Properties Window.
+    Make sure you give it a good name and filename.
+
+ 8. You can and should add extra member data to the derived VBot classes.
+    For example, you can have extra pictures and switch between them.
+    As another example, you can keep track of the energy since the last 
+    movement and if it changed, jump somewhere out of the way.
+
+ 9. To include GC classes in non-GC classes, you need to #include <vcclr.h>
+    and then use the gcroot template as demonstrated in VBot.h.
+
+10. To get a DropDownList, choose a ComboBox and set its DropDownStyle 
+    Property to DropDownList.  You type the strings in the Items Property.
+    In the main form's constructor, set its SelectedIndex property to 0.
+
+11. You must put #include "stdafx.h" at the top of all
+    the CPP files that you make, first thing after your comment block.
+
+12. To convert decimal (the type of the Value property of a 
+    numeric updown and other controls) to int:  Decimal::ToInt32(....
+
+13. When checking for battles, you will need to do a double for-loop 
+    through all the bots in the list, checking each i, j pair.  But make 
+    sure that you don't check  a) i,i   b) both i,j and j,i.
+
+14. When deleting dead bots from the list, make sure you delete the higher
+    indexed ones first.  Please understand why this is - I may ask when you
+    come to demo.
+
+15. To load an bitmap image, do: image = gcnew Drawing::Bitmap("HappyBot.bmp");
+    Note that you need to "using" the right namespaces.
+    Furthermore, you must use step 7 to make the bitmap resources so the  
+    program can find them when you run it.
+
+16. Always clean the solution and delete the Debug folder!
+
+17. Make a "Closed" event handler for the main form where you:
+
+        A. Set the Enabled Property of the Timer to false
+        B. Call delete on the bot list pointer
+
+18. This program has been given before. Previous test plans and programs 
+    have been saved.  If yours looks similar to somebody's from a previous
+    semester, expect to get a 0.  So don't even submit to the temptation!
+
+19. I will give up to 5 points of extra credit for "extras" you add to this,
+    (on an "as it strikes me" basis) provided that you 
+    DEMONSTRATE BEFORE THE DUE DATE TIME.
+
+20. I will check out your repository on due date.
+    If you want to receive full credit, you should use that check out for your demo.
+	You will lose one point for every late day till grace date.  
+	The final submission date is based on your svn log. 
+	You will not receive any credit if you demo after October 30, 3:00 pm.

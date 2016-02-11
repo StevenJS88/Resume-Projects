@@ -1,0 +1,31 @@
+#include "Maze.h"
+
+Maze ( Panel ^drawingPanel, ifstream &ifs )
+{
+
+}
+
+void Solve ( int xPixel, int yPixel )
+{
+	//Setup before calling recursive function
+	RecSolve( xPixel, yPixel);
+}
+
+
+void RecSolve ( int row, int col )
+{
+	if(false)
+	{
+		
+
+	}
+	else
+	{
+
+	}
+}
+
+void Show ( char cells[][MAXSIZE] )
+{
+
+}

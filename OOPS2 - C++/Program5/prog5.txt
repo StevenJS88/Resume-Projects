@@ -1,0 +1,184 @@
+CS/SE 2630 - Object-Oriented Programming & Data Structures II  F15
+
+Program: 5
+Points:  30
+
+Due Date for all plans:    November 25, 10:00 p.m.
+Due Date for rest:         December 8,  4:00 p.m.
+Grace Date for rest:       December 11, 3:00 p.m.
+You will lose one point each day if you demo after Due date but before Grace date.
+
+----------------------------------------------------------------------------
+Timing STL container classes and experimentation.
+----------------------------------------------------------------------------
+
+Besides the program, the other requirements are listed below.
+ALL items except number 1 and 3 MUST BE PUT IN 
+subversion under folder for your team.
+
+  1. Work Plan: It must show dates/times you will work on this program, 
+     together with what you plan to work on at that time, and how you
+     plan to finish by the due date or before. 
+	 Failure to do so will result in up to a 5 point deduction.
+     You must use the SE Tool demonstrated in lab and lecture to 
+     develop your plan. The plan is under the project name, Prog5.
+
+  2. Version Control:  You must check your project into subversion.
+     Starting on December 2, you must periodically 
+     (every 3 days) check your program into subversion.  Note that I will 
+     use what is in there for grading, so your grade 
+     depends on it! You MUST put good comments on each check-in.
+     If you completely finish early, you should mark that you are finished 
+     in the SE tool, and obviously won't continue to check in.
+
+  3. Time logs:  
+     You must use the SE Tool demonstrated in lab and lecture to 
+     enter your time that you have worked on this program.  
+     This portion of the tool will allow you to record you start 
+     and stop times that you work on your program, including work 
+     on design, implementation (coding), testing, or meeting with 
+     your instructor. Make sure to add comments to your entries.
+     I will deduct points if you don't add comments.
+     Starting on December 2, you must periodically 
+     put your time entries in Prog5 project via this CSSE tool. 
+	 Correct, accurate and sufficient entries are worth up to 5 points.
+
+  4. Design:  You must have a MSWord document containing the following 
+     design items:
+
+       a) Picture of the GUI design.  You can draw this in Paint and 
+          copy it to the word document or better yet, "design" it in
+          Visual Studio (drag on the components, they don't have to
+          do anything).  Do an <Alt>-PrintScrn or use the Snipping Toll 
+		  to capture the window and paste it to the Word Document.
+
+       b) A class diagram.  You can use Rhapsody or any tool you prefer,
+          and again copy/paste the diagram to Word.  
+          Your diagram must show the classes and the relationship 
+          between the classes.  You need to specify all the classes,
+          including the ones I wrote and the STL classes you use.
+          You don't need to put in all the GUI classes.  Just put
+          in one class, called Form1, to represent all the GUI.
+          You don't need to specify any attributes or 
+          operations for the classes.
+     Name your design document Design_<group_name>.docx and submit it to subversion.
+	 Failure to do so will result in up to a 5 point deduction.
+	 
+  5. Written analysis of the results.  You must "experiment" with your  
+     program. Write up (MSWord document) your "conclusions" about what
+     you discovered.  Compare the different containers with the different
+     insertions/deletion choices and write up your conclusions.  Make sure 
+     to include at least one table showing the time vs. # of iterations(runs).
+     Also, consider the effects that timeslicing and high-speed 
+     cache have on your tests.
+     
+	 Name your analysis document Analysis_<group_name>.docx and 
+	 submit it to subversion. Failure to do so will result in up to 
+	 a 5 point deduction.
+
+  6. Test bed mains:  None required for this program.
+
+  7. You must work in groups as assigned in class.
+
+You will be demonstrating this program in my office. 
+All demo has to be done by 3:00 pm, Dec 11.
+I will be checking out what is in version control when you come up 
+to demonstrate.  Therefore, you must make sure that what is in there
+will allow me to build and run.
+
+Also, note that I will be asking questions when you come to demonstrate.
+It is assumed you will understand what you have done.  Expect to lose
+points if this is not true.  Also, if it is clear that one person 
+understands the program much better than another, then there can be a 
+difference in grades.
+
+---------------------------------------------------------------------------
+
+In this program, you will be running timing tests to experiment with
+the STL container classes.
+
+You must make a "nice" GUI that provides the following capabilities:
+
+   1. Allow the user to create and maintain a list of strings.  The user 
+      must be able to add and remove strings (similar to Lab 6). 
+
+   2. Allow the user to select which container to time. The containers
+      you must support are: vector, list, deque, multiset, multimap
+
+   3. Allow the user to specify the trial type for vector, list, and deque.  
+      The  possibilities are:  
+	      Add Front - Remove Front, 
+          Add Front - Remove Rear, 
+	      Add Rear  - Remove Front, 
+          Add Rear  - Remove Rear
+      For the multiset and multiMap, the trial type is always "Sorted".
+
+   4. Provide a way for the user to specify how many iterations of the test 
+      to perform.  The number must be in increments of 1000, with a minimum
+      of 1000.  (Note:  You can have the user choose 1, 2, 3... and
+      label it as x1000 or something like that, if you want).  The test 
+      being run is already given in the Run method in Trial.cpp.
+
+   5. Provide a Button to start the timing and something to display the 
+      number of microseconds that the trial took.  Do NOT clear the word
+      list after each trial.  We want to be able to quickly change to
+      another container and test it with the same words.
+
+
+I will supply you with two classes (four files).
+ 
+   - A high-precision microsecond timer.
+     The .NET DateTime class claims 100 nanosecond resolution; however,
+     it only gives granularity to 10 milliseconds.
+ 
+   - An abstract Trial class.  You must make descendant classes
+     corresponding to each of the 5 containers.  You are not allowed
+     to modify Trial EXCEPT TO COMMENT IT PROPERLY.
+
+
+-------------------------------------------------------------------------
+
+Some extra requirements
+
+ 1. You MUST use polymorphism for the Trial hierarchy classes in Form1.h
+    You will lose points for "unnecessary repetitive code".  By this I 
+    mean I don't want to see a big chunk of code for Vector, then 
+    another set for List, etc.  With polymorphism, about the only
+    code that is not used in common is the "new" for the different
+    Trial subclasses.  The rest of what is done should be a common
+    to all (and therefore only appear once).
+
+ 2. For your classes, only one-line methods can be inline.
+
+ 3. You must use the four files I provided.  You MUST
+    comment them properly, but other than that, you can't
+    modify them.
+
+ 4. Each derived class can override only one of the
+    RemoveElement methods.
+
+ 5. The main form can't be any bigger than 1024 x 768.
+    It must run on my machine without me changing the graphics setup.
+
+ 6. You must put #include "stdafx.h" at the top of all
+    the CPP files that you make, first thing after your comment block.
+
+ 7. Always clean the solution and delete the Debug folder and the
+    SDF file before saving.  The sdf file is huge!!!
+
+ 8. Put the following in your main form's H file, right after the other
+    #include's :
+
+        #define CRTDBG_MAP_ALLOC
+        #include <stdlib.h>
+        #include <crtdbg.h>
+
+     Make a "Closed" event handler for the main form where you:
+
+        A. Delete any pointers you may have left over
+        B. Add the line:    _CrtDumpMemoryLeaks();
+
+ 9. No extra credit for this program.
+
+10. You MUST put all the descendant classes in one H file and one CPP file.
+    [-5 if not done.]

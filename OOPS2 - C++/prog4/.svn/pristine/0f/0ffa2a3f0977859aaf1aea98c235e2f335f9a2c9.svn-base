@@ -1,0 +1,24 @@
+﻿Build started 11/4/2015 11:32:18 AM.
+Project "C:\Users\storksons\Dropbox\UW Platteville\Classes\Fall 2015\OOPS2\Programs\program4\Prog4\Prog4\Prog4.vcxproj" on node 2 (Rebuild target(s)).
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib HelpForm.cpp MainForm.cpp Maze.cpp
+  HelpForm.cpp
+  MainForm.cpp
+  Maze.cpp
+Maze.cpp(3): error C2143: syntax error : missing ')' before '^'
+Maze.cpp(3): error C2143: syntax error : missing ';' before '^'
+Maze.cpp(3): error C2512: 'Maze' : no appropriate default constructor available
+Maze.cpp(3): error C3145: 'drawingPanel' : global or static variable may not have managed type 'System::Int32 ^'
+          may not declare a global or static variable, or a member of a native type that refers to objects in the gc heap
+Maze.cpp(3): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+Maze.cpp(3): error C2143: syntax error : missing ';' before '&'
+Maze.cpp(3): error C2059: syntax error : ')'
+Maze.cpp(4): error C2470: 'ifs' : looks like a function definition, but there is no parameter list; skipping apparent body
+Maze.cpp(11): error C3861: 'RecSolve': identifier not found
+Maze.cpp(28): error C2065: 'MAXSIZE' : undeclared identifier
+  Generating Code...
+Done Building Project "C:\Users\storksons\Dropbox\UW Platteville\Classes\Fall 2015\OOPS2\Programs\program4\Prog4\Prog4\Prog4.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.29
